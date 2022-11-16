@@ -6,4 +6,6 @@ psycopg2
 python-dotenv
 SQLAlchemy
 flask_bootstrap
+flask_moment
+
 
