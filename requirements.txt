@@ -5,4 +5,5 @@ flask_wtf
 psycopg2
 python-dotenv
 SQLAlchemy
+flask_bootstrap
 
