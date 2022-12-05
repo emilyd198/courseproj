@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Schedule{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+    <head>
+        <meta charset="UTF-8">
+        <title>College Course Schedule Helper</title>
+        <link rel="stylesheet" href='/static/style.css'>
+    </head>
+    <h1>College Course Schedule Helper</h1>
+        {{ wtf.quick_form(form) }}
+    <h3>Added: {{ courseadd }} {{ titleadd }} {{ deptadd }}.</h3>
+    <body>
+    </body>
+</div>
+{% endblock %}
