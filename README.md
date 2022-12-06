@@ -1,11 +1,3 @@
-Flasky
+Course Project 
 ======
-
-This repository contains the source code examples for the second edition of my O'Reilly book [Flask Web Development](http://www.flaskbook.com).
-
-The commits and tags in this repository were carefully created to match the sequence in which concepts are presented in the book. Please read the section titled "How to Work with the Example Code" in the book's preface for instructions.
-
-For Readers of the First Edition of the Book
---------------------------------------------
-
-The code examples for the first edition of the book were moved to a different repository: [https://github.com/miguelgrinberg/flasky-first-edition](https://github.com/miguelgrinberg/flasky-first-edition).
+For my course project I created a web application that uses a database to compare the courses in departments. The initial idea behind the application was to help professors to view and edit their schedules, while also seeing the schedules of classes in different departments, especially the disciplines that often overlap, such as common major-minor combinations or double majors. This would allow departments to create compatible class schedules, making scheduling for professors and students easier. The web application create models of a database of college courses and populates them with some of the courses from winter semester 2022 at Alma College.  The user is presented with a form that asks: “Please select two departments below” and is given a dropdown list of the available departments in that semester. The form will not allow the user to choose the same department. Once the user submits the form, the courses from both departments is added to the table and the user can view the courses that are offered from both of those departments. There is also an option for the user to add a new course. In the navigation tab at the top the user can choose “Add Course” where they will be redirected to a new page where they can type in a course code and title and add it to the database. If the course is not already in the database, they will get a message that says "Course Added Successfully".
