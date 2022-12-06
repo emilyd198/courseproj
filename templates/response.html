@@ -16,18 +16,15 @@
     <body>
         <table>
                 <tr>
-                    <th>Courses </th>
                     <th>Course Title</th>
-                    <th>Sections.number</th>
-                    <th>Courses.department</th>
-                    <th>Sections.Professor</th>
-                    <th>Sections.meeting</th>
+                    <th>Course Info</th>
+
                 </tr>
-                {%for key, value in session['course_info'].items()%}
-                 <tr>
-                     <td>{{ key }}</td>
-                     <td>{{ value }}</td>
-                     {%endfor%}
+                {%for key, values in session['course_info'].items()%}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ values }}</td>
+                {%endfor%}
             </tr>
         </table>
     </body>
