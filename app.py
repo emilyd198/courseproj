@@ -230,12 +230,9 @@ def add_course():
     :return: add_course.html template
     """
     form = AddForm()
+    session['course'] = form.course.data
+    session['title'] = form.title.data
     if form.validate_on_submit():
-        session['course'] = form.course.data
-        session['title'] = form.title.data
-        session['department'] = form.department.data
-        results = db.session.query(Departments).filter(Departments.code == form.department.data).all()
-        print(results)
         course_add = Courses.query.filter_by(title=form.title.data).first()
         if course_add is None:
             course_add = Courses(course=form.course.data, title=form.title.data)
@@ -244,8 +241,9 @@ def add_course():
             flash("Course Added Successfully")
         else:
             flash("Course already exists, please add a different course")
+
     return render_template('add_course.html', form=form, courseadd=session.get('course'),
-                           titleadd=session.get('title'), deptadd=session.get('department'))
+                           titleadd=session.get('title'))
 
 
 if __name__ == '__main__':
