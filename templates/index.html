@@ -11,19 +11,21 @@
         <link rel="stylesheet" href='/static/style.css'>
     </head>
     <h1>College Course Schedule Helper</h1>
-    <h3>Please select two departments below.</h3>
+    <h3>Departments: {{ department1 }} and {{ department2 }}.</h3>
     {{ wtf.quick_form(form) }}
     <body>
         <table>
                 <tr>
-                    <th>Courses </th>
                     <th>Course Title</th>
-                    <th>Sections.number</th>
-                    <th>Courses.department</th>
-                    <th>Sections.Professor</th>
-                    <th>Sections.meeting</th>
-                </tr>
+                    <th>Course Info</th>
 
+                </tr>
+                {%for key, values in session['course_info'].items()%}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ values }}</td>
+                {%endfor%}
+            </tr>
         </table>
     </body>
 </div>
