@@ -147,27 +147,6 @@ class AddForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
-@app.errorhandler(404)
-def page_not_found(e):
-    """
-    error handler if server cannot find the requested resource.
-    :param e: event
-    :return: 404.html template
-    """
-    return render_template('404.html'), 404
-
-
-@app.errorhandler(500)
-def internal_server_error(e):
-    """
-    error handler if server encountered an unexpected
-    condition that prevented it from fulfilling the request.
-    :param e: event
-    :return: 500.html template
-    """
-    return render_template('500.html'), 500
-
-
 @app.route('/')
 def index():
     """
